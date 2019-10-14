@@ -1,6 +1,9 @@
 import React from 'react'
 import axios from 'axios'
 
+import styles from '../App.css'
+
+
 class SoccerData extends React.Component{
     constructor(){
         super()
@@ -29,9 +32,21 @@ class SoccerData extends React.Component{
     render(){
         {console.log(this.state.players)}
         return (
-          <div>
+          <div className="display">
             {this.state.players.map(player=>(
-                <h1>{player.name}</h1>
+                <div className="PlayerCard">
+                    <h1>{player.name}</h1>
+                    <div className="PlayerStats">
+                        <div>
+                            <h2>Country:</h2>
+                            <p>{player.country}</p>
+                        </div>
+                        <div>
+                            <h2>Searches:</h2>
+                            <p>{player.searches}</p>
+                        </div>
+                    </div>
+                </div>
             ))}
           </div>
         );
