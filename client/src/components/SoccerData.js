@@ -20,7 +20,7 @@ class SoccerData extends React.Component{
         axios.get('http://localhost:5000/api/players')
             
             .then((res)=>{
-                console.log(res.data)
+                
                 this.setState({
                     players: res.data
                 })
@@ -30,7 +30,7 @@ class SoccerData extends React.Component{
     }
 
     render(){
-        {console.log(this.state.players)}
+       
         return (
           <div className="display">
             {this.state.players.map(player=>(
