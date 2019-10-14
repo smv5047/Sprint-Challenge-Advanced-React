@@ -31,3 +31,33 @@
     transform: rotate(360deg);
   }
 }
+
+.display {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.PlayerCard {
+  width: 30%;
+  padding: 2.5%;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.PlayerStats {
+  display: flex;
+  padding: 2.5%;
+  border: 1px solid black;
+}
+
+
+.dark-mode {
+  color: #fff;
+  background-color: #313843;
+
+}
+
