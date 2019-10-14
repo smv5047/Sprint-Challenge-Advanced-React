@@ -13,13 +13,16 @@ it('renders without crashing', () => {
   ReactDOM.unmountComponentAtNode(div);
 });
 
-it('checks that playercards are displayed correctly', () =>{
+it('checks that dark mode button is displayed correctly', () =>{
   const wrapper = rtl.render(<App/>)
   wrapper.debug(wrapper.queryByText('Dark Mode'))
+  wrapper.debug(wrapper.queryByText('country'))
  
 
   const dark =wrapper.queryByText(/dark/i)
   expect(dark).toBeInTheDocument();
   expect(dark).toBeTruthy();
   expect(dark).toBeVisible();
+
+
 })
